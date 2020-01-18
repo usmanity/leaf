@@ -102,10 +102,9 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: "SF Mono", "Roboto Mono", Menlo, monospace;
+  font-size: 1.2rem;
+  color: #555;
 }
 
 /* Text-level semantics
@@ -395,14 +394,14 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: 'Source Serif Pro', serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.8rem;
   line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: 'Inter', sans-serif;
+  font-family: "New York Medium", "Source Serif Pro", serif;
 }
 
 a {
@@ -453,6 +452,12 @@ mark, ins {
 
 big {
   font-size: 2.0rem;
+}
+
+time {
+  font-size: 1.2rem;
+  font-family: "SF Mono", "Roboto Mono", Menlo, monospace;
+  color: #555;
 }
 
 /*--------------------------------------------------------------
@@ -636,10 +641,27 @@ textarea {
 
 .site-header a {
   color: #373a2b;
-  font-family: 'Source Serif Pro', serif;
+  font-family: "New York Medium", "Source Serif Pro", serif;
   letter-spacing: 0.013em;
   font-weight: 100;
   font-size: 2.0rem;
+}
+
+.entry-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.entry-footer .cat-links .post-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
 }
 
 /*----------------
