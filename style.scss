@@ -39,23 +39,35 @@ Tags: one-column
 /* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 // ------ VARIABLES
+html {
+  --headingColor: #444;
+  --baseSize: 8px;
+  --radius: var(--baseSize) / 2;
 
-$baseSize: 8px;
+  // headings
 
-// headings
-$headingColor: #444;
-$headingFont: "New York Medium", "Source Serif Pro", serif;
+--headingFont: "New York Medium", "Source Serif Pro", serif;
 
 // body, paragraph, other text
-$bodyColor: #333;
-$bodyFont: "Inter", sans-serif;
+--bodyColor: #333;
+--bodyBackgroundColor: white;
+--bodyFont: "Inter", sans-serif;
+--invertedBodyColor: white;
+--invertedBodyBackgroundColor: var(--bodyColor);
+
+// links, anchors
+--linkColor: rgb(29, 45, 160);
 
 // fixed width
-$fixedWidthColor: #555;
-$fixedWidthFont: "SF Mono", "Roboto Mono", Menlo, monospace;
-$fixedFontSize: 1.2rem;
+  --fixedWidthFont: 'SF Mono', 'Roboto Mono', Menlo, monospace;
+  --fixedFontSize: 1.2rem;
+  --fixedWidthColor: #555;
 
-$radius: $baseSize / 2;
+  // site header
+   --siteHeaderBG: rgb(246, 216, 159);
+}
+
+
 
 @mixin flexColumn {
   display: flex;
@@ -63,17 +75,29 @@ $radius: $baseSize / 2;
 }
 
 @mixin header {
-  color: $headingColor;
-  font-family: $headingFont;
+  color: var(--headingColor);
+  font-family: var(--headingFont);
   letter-spacing: 0.013em;
   font-weight: 100;
   font-size: 3rem;
   margin-bottom: 0;
   a {
     &:hover {
-    color: darken($headingColor, 50%);
+    color: var(--headingColor);
     background: gainsboro;
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --headingColor: white;
+    --fixedWidthColor: white;
+    --bodyColor: white;
+    --bodyBackgroundColor: #222;
+    --invertedBodyColor: #333;
+    --siteHeaderBG: var(--bodyBackgroundColor);
+    --linkColor: rgb(246, 216, 159);
   }
 }
 
@@ -110,8 +134,9 @@ html {
 body {
   margin: 0;
   // background-color: #f9f9f9;
-  color: #4b4b4b;
+  color: var(--bodyColor);
   font-size: 1.6rem;
+  background-color: var(--bodyBackgroundColor);
 }
 
 /**
@@ -143,10 +168,10 @@ hr {
  */
 
 pre {
-  font-family: $fixedWidthFont;
-  font-size: $fixedFontSize;
-  color: $fixedWidthColor;
-  border-radius: $radius;
+  font-family: var(--fixedWidthFont);
+  font-size: var(--fixedFontSize);
+  color: var(--fixedWidthColor);
+  border-radius: var(--radius);
 }
 
 /* Text-level semantics
@@ -157,7 +182,7 @@ pre {
  */
 
 a {
-  color: rgb(29, 45, 160);
+  color: var(--linkColor);
   padding: 2px 5px;
   border-radius: 3px;
 }
@@ -444,8 +469,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
-  font-family: $bodyFont;
+  font-family: var(--bodyFont);
   font-size: 1.8rem;
   line-height: 1.5;
 }
@@ -457,7 +481,7 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: $headingFont;
+  font-family: var(--headingFont);
 }
 
 a {
@@ -521,9 +545,9 @@ big {
 }
 
 time {
-  font-size: $fixedFontSize;
-  font-family: $fixedWidthFont;
-  color: $fixedWidthColor;
+  font-size: var(--fixedFontSize);
+  font-family: var(--fixedWidthFont);
+  color: var(--fixedWidthColor);
 }
 
 /*--------------------------------------------------------------
@@ -538,11 +562,6 @@ html {
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
-}
-
-body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */
 }
 
 hr {
@@ -700,7 +719,7 @@ textarea {
 .site-header {
   width: 100%;
   height: 60px;
-  background: rgb(246, 216, 159);
+  background: var(--siteHeaderBG);
   display: flex;
   justify-content: center;
   .header-content {
@@ -726,7 +745,7 @@ textarea {
   
   a {
     font-weight: 100;
-    color: $headingColor;
+    color: var(--headingColor);
   }
 }
 
@@ -741,7 +760,7 @@ textarea {
       li {
         padding: 2px 6px;
         margin: 0 4px;
-        background-color: #987987;
+        background-color: var(--invertedBodyBackgroundColor);
         border-radius: 4px;
         font-size: 1.3rem;
         height: 22px;
@@ -752,7 +771,7 @@ textarea {
           margin-left: 0;
         }
         a {
-          color: white;
+          color: var(--invertedBodyColor);
         }
       }
     }
@@ -763,10 +782,10 @@ textarea {
       &:first-of-type {
         margin-left: 0;
       }
-      color: white;
+      color: var(--invertedBodyColor);
       padding: 2px 6px;
       margin: 0 4px;
-      background-color: #987987;
+      background-color: var(--bodyBackgroundColor);
       border-radius: 4px;
       font-size: 1.3rem;
       height: 22px;
@@ -784,13 +803,13 @@ textarea {
 
 .comments-link,
 .post-edit-link {
-  font-size: $fixedFontSize;
-  font-family: $fixedWidthFont;
+  font-size: var(--fixedFontSize);
+  font-family: var(--fixedWidthFont);
   margin: 5px 0;
   padding-left: 0;
   a,
   span { 
-    color: $fixedWidthColor;
+    color: var(--fixedWidthColor);
     padding-left: 0;
   }
 }
