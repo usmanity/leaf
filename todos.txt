@@ -1,7 +1,7 @@
-- remove menu from header
-- setup dark mode
-- fix typography
 - remove underscores for links
+- fix typography
+- setup dark mode
 - space each post better
 
 x make header same color scheme as main theme
+x remove menu from header
