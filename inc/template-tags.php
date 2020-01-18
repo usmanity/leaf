@@ -14,7 +14,7 @@ if ( ! function_exists( 'leaf_posted_on' ) ) :
   function leaf_posted_on() {
     $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
     if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-      $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+      $time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
     }
 
     $time_string = sprintf( $time_string,
@@ -79,7 +79,7 @@ if ( ! function_exists( 'leaf_entry_footer' ) ) :
         sprintf(
           wp_kses(
             /* translators: %s: post title */
-            __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'leaf' ),
+            __( 'Leave a comment<span class="screen-reader-text"> on "%s"</span>', 'leaf' ),
             array(
               'span' => array(
                 'class' => array(),

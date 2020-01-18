@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: Leaf
+Version: 1.0
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
@@ -26,7 +27,6 @@ Tags: one-column
 # Widgets
 # Content
   ## Posts and pages
-  ## Comments
 # Infinite scroll
 # Media
   ## Captions
@@ -115,6 +115,7 @@ pre {
   font-family: "SF Mono", "Roboto Mono", Menlo, monospace;
   font-size: 1.2rem;
   color: #555;
+  border-radius: 4px;
 }
 
 /* Text-level semantics
@@ -426,7 +427,7 @@ a {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
   line-height: 2.6rem;
 }
 
@@ -652,7 +653,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Layout
+# custom leaf styles after _underscores
 --------------------------------------------------------------*/
 .content-area,
 .header-content {
@@ -777,6 +778,26 @@ textarea {
 
 .post {
   margin: 20px 0;
+}
+
+.wp-block-embed {
+  text-align: center;
+}
+
+.comments-link,
+.post-edit-link {
+  font-size: 1.2rem;
+  font-family: "SF Mono", "Roboto Mono", Menlo, monospace;
+  margin: 5px 0;
+  padding-left: 0;
+}
+
+.comments-link a,
+.comments-link span,
+.post-edit-link a,
+.post-edit-link span {
+  color: #555;
+  padding-left: 0;
 }
 
 /*----------------

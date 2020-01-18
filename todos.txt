@@ -1,7 +1,10 @@
-- space each post better
 - setup dark mode
+- add 'navigation links'
+- move title to left, nav links to the right of header
+- add footer
 
 x make header same color scheme as main theme
 x remove menu from header
 x remove underscores for links
 x fix typography
+x space each post better
