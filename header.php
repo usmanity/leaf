@@ -36,7 +36,8 @@
       <?php endif; ?>
     </div><!-- .site-branding -->
 
-    <nav id="site-navigation" class="main-navigation">
+    <!-- // hiding for now, jan 2020 -->
+    <nav id="site-navigation" class="hidden main-navigation">
       <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'leaf' ); ?></button>
       <?php
       wp_nav_menu( array(

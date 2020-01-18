@@ -616,7 +616,12 @@ textarea {
 
 .site-header {
   width: 100%;
-  background-color: black;
-  color: white;
+}
+
+/*----------------
+Helpers
+----------------*/
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
