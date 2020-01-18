@@ -42,20 +42,35 @@ Tags: one-column
 
 // headings
 $headingColor: #444;
-$headingFont: 'New York Medium', 'Source Serif Pro', serif;
+$headingFont: "New York Medium", "Source Serif Pro", serif;
 
 // body, paragraph, other text
 $bodyColor: #333;
-$bodyFont: 'Inter', sans-serif;
+$bodyFont: "Inter", sans-serif;
 
 // fixed width
 $fixedWidthColor: #555;
-$fixedWidthFont: 'SF Mono', 'Roboto Mono', Menlo, monospace;
+$fixedWidthFont: "SF Mono", "Roboto Mono", Menlo, monospace;
 $fixedFontSize: 1.2rem;
 
 @mixin flexColumn {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin header {
+  color: $headingColor;
+  font-family: $headingFont;
+  letter-spacing: 0.013em;
+  font-weight: 100;
+  font-size: 3rem;
+  margin-bottom: 0;
+  a {
+    &:hover {
+    color: darken($headingColor, 50%);
+    background: gainsboro;
+    }
+  }
 }
 
 /* Document
@@ -65,10 +80,14 @@ $fixedFontSize: 1.2rem;
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
 @supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
 
 html {
@@ -87,7 +106,7 @@ html {
 body {
   margin: 0;
   // background-color: #f9f9f9;
-  color: #4B4B4B;
+  color: #4b4b4b;
   font-size: 1.6rem;
 }
 
@@ -97,8 +116,7 @@ body {
  */
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  @include header;
 }
 
 /* Grouping content
@@ -134,7 +152,9 @@ pre {
  */
 
 a {
-  background-color: transparent;
+  color: rgb(29, 45, 160);
+  padding: 2px 5px;
+  border-radius: 3px;
 }
 
 /**
@@ -234,7 +254,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -244,7 +265,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -423,7 +445,12 @@ textarea {
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   clear: both;
   font-family: $headingFont;
 }
@@ -432,11 +459,16 @@ a {
   text-decoration: none;
 }
 
+// paragraph text, main body text
 p {
   margin-bottom: 1.5em;
+  line-height: 2.6rem;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
   font-style: italic;
 }
 
@@ -459,23 +491,28 @@ pre {
   padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 1.5rem;
 }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
 big {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 time {
@@ -510,22 +547,29 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul, ol {
-  margin: 0 0 1.5em 3em;
+ul,
+ol {
+  margin: 0 0 3rem 1rem;
 }
 
 ul {
-  list-style: disc;
+  list-style: none;
+  li {
+    margin: 10px 0px;
+    &:before {
+      position: absolute;
+      content: "☉";
+      margin-left: -20px;
+      margin-top: 6px;
+      font-size: 1.2rem;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
 }
 
 ol {
   list-style: decimal;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
 }
 
 dt {
@@ -568,7 +612,7 @@ input[type="submit"] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .6em 1em .4em;
+  padding: 0.6em 1em 0.4em;
 }
 
 button:hover,
@@ -578,7 +622,8 @@ input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
 
-button:active, button:focus,
+button:active,
+button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -641,7 +686,8 @@ textarea {
 # Layout
 --------------------------------------------------------------*/
 
-.content-area, .header-content {
+.content-area,
+.header-content {
   max-width: 840px;
   margin: auto;
 }
@@ -655,23 +701,76 @@ textarea {
   .header-content {
     line-height: 0.8;
   }
+  h1 {
+    margin: 0.67em 0;
+  }
   a {
-    color: rgb(55, 58, 43);
-    font-family: $headingFont;
-    letter-spacing: 0.013em;
+    @include header;
+    
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.entry-header {
+  h2 {
+    @include header;
+    // font-size: 2rem;
+  }
+  
+  a {
     font-weight: 100;
-    font-size: 2.0rem;
+    color: $headingColor;
   }
 }
 
 .entry-footer {
-  @include flexColumn();
+  @include flexColumn;
   .cat-links {
     .post-categories {
       display: flex;
-    list-style: none;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 2px 6px;
+        margin: 0 4px;
+        background-color: #987987;
+        border-radius: 4px;
+        font-size: 1.3rem;
+        height: 22px;
+        &:before {
+          content: "";
+        }
+        &:first-of-type {
+          margin-left: 0;
+        }
+        a {
+          color: white;
+        }
+      }
     }
   }
+  .tags-links {
+    margin: 5px 0;
+    a {
+      &:first-of-type {
+        margin-left: 0;
+      }
+      color: white;
+      padding: 2px 6px;
+      margin: 0 4px;
+      background-color: #987987;
+      border-radius: 4px;
+      font-size: 1.3rem;
+      height: 22px;
+    }
+  }
+}
+
+.post {
+  margin: 20px 0;
 }
 
 /*----------------
@@ -680,4 +779,3 @@ Helpers
 .hidden {
   display: none;
 }
-

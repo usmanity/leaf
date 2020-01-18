@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Leaf
 Theme URI: https://github.com/usmanity/leaf
@@ -44,12 +45,12 @@ Tags: one-column
  */
 @import url("https://rsms.me/inter/inter.css");
 html {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
   html {
-    font-family: 'Inter var', sans-serif;
+    font-family: "Inter var", sans-serif;
   }
 }
 
@@ -68,7 +69,7 @@ html {
  */
 body {
   margin: 0;
-  color: #4B4B4B;
+  color: #4b4b4b;
   font-size: 1.6rem;
 }
 
@@ -77,8 +78,17 @@ body {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  color: #444;
+  font-family: "New York Medium", "Source Serif Pro", serif;
+  letter-spacing: 0.013em;
+  font-weight: 100;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+h1 a:hover {
+  color: black;
+  background: gainsboro;
 }
 
 /* Grouping content
@@ -113,7 +123,9 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent;
+  color: #1d2da0;
+  padding: 2px 5px;
+  border-radius: 3px;
 }
 
 /**
@@ -399,7 +411,12 @@ textarea {
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   clear: both;
   font-family: "New York Medium", "Source Serif Pro", serif;
 }
@@ -410,9 +427,13 @@ a {
 
 p {
   margin-bottom: 1.5em;
+  line-height: 2.6rem;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
   font-style: italic;
 }
 
@@ -435,23 +456,28 @@ pre {
   padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 1.5rem;
 }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
 big {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 time {
@@ -488,22 +514,31 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul, ol {
-  margin: 0 0 1.5em 3em;
+ul,
+ol {
+  margin: 0 0 3rem 1rem;
 }
 
 ul {
-  list-style: disc;
+  list-style: none;
+}
+
+ul li {
+  margin: 10px 0px;
+}
+
+ul li:before {
+  position: absolute;
+  content: "☉";
+  margin-left: -20px;
+  margin-top: 6px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+  text-align: center;
 }
 
 ol {
   list-style: decimal;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
 }
 
 dt {
@@ -546,7 +581,7 @@ input[type="submit"] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .6em 1em .4em;
+  padding: 0.6em 1em 0.4em;
 }
 
 button:hover,
@@ -556,7 +591,8 @@ input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
 
-button:active, button:focus,
+button:active,
+button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -618,7 +654,8 @@ textarea {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-.content-area, .header-content {
+.content-area,
+.header-content {
   max-width: 840px;
   margin: auto;
 }
@@ -639,12 +676,45 @@ textarea {
   line-height: 0.8;
 }
 
+.site-header h1 {
+  margin: 0.67em 0;
+}
+
 .site-header a {
-  color: #373a2b;
+  color: #444;
   font-family: "New York Medium", "Source Serif Pro", serif;
   letter-spacing: 0.013em;
   font-weight: 100;
-  font-size: 2.0rem;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.site-header a a:hover {
+  color: black;
+  background: gainsboro;
+}
+
+.site-header a:hover {
+  background-color: transparent;
+}
+
+.entry-header h2 {
+  color: #444;
+  font-family: "New York Medium", "Source Serif Pro", serif;
+  letter-spacing: 0.013em;
+  font-weight: 100;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.entry-header h2 a:hover {
+  color: black;
+  background: gainsboro;
+}
+
+.entry-header a {
+  font-weight: 100;
+  color: #444;
 }
 
 .entry-footer {
@@ -662,6 +732,51 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entry-footer .cat-links .post-categories li {
+  padding: 2px 6px;
+  margin: 0 4px;
+  background-color: #987987;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  height: 22px;
+}
+
+.entry-footer .cat-links .post-categories li:before {
+  content: "";
+}
+
+.entry-footer .cat-links .post-categories li:first-of-type {
+  margin-left: 0;
+}
+
+.entry-footer .cat-links .post-categories li a {
+  color: white;
+}
+
+.entry-footer .tags-links {
+  margin: 5px 0;
+}
+
+.entry-footer .tags-links a {
+  color: white;
+  padding: 2px 6px;
+  margin: 0 4px;
+  background-color: #987987;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  height: 22px;
+}
+
+.entry-footer .tags-links a:first-of-type {
+  margin-left: 0;
+}
+
+.post {
+  margin: 20px 0;
 }
 
 /*----------------
