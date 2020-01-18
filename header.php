@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
-
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 
@@ -15,6 +15,8 @@
   </a>
 
   <header class="site-header">
+    <div class="header-content">
+
     <div class="site-branding">
       <?php
       the_custom_logo();
@@ -43,6 +45,8 @@
       ) );
       ?>
     </nav><!-- #site-navigation -->
+    
+    </div><!-- .header-content -->
   </header><!-- #masthead -->
 
   <div id="content" class="site-content">
