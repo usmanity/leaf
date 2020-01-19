@@ -1,4 +1,4 @@
-- add 'navigation links'
+- add 'navigation links' [primary menu needs to be updated]
 - move title to left, nav links to the right of header
 - add footer
 

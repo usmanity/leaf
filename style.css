@@ -43,7 +43,7 @@ html {
   --baseSize: 8px;
   --radius: var(--baseSize) / 2;
   --headingFont: "New York Medium", "Source Serif Pro", serif;
-  --bodyColor: #333;
+  --bodyColor: #1c1c1c;
   --bodyBackgroundColor: white;
   --bodyFont: "Inter", sans-serif;
   --invertedBodyColor: white;
@@ -52,6 +52,7 @@ html {
   --fixedWidthFont: 'SF Mono', 'Roboto Mono', Menlo, monospace;
   --fixedFontSize: 1.2rem;
   --fixedWidthColor: #555;
+  --fixedWidthBackgroundColor: #444;
   --siteHeaderBG: rgb(246, 216, 159);
 }
 
@@ -64,6 +65,7 @@ html {
     --invertedBodyColor: #333;
     --siteHeaderBG: var(--bodyBackgroundColor);
     --linkColor: rgb(246, 216, 159);
+    --fixedWidthBackgroundColor: #000;
   }
 }
 
@@ -118,7 +120,6 @@ h1 {
 
 h1 a:hover {
   color: var(--headingColor);
-  background: gainsboro;
 }
 
 /* Grouping content
@@ -476,14 +477,15 @@ address {
 }
 
 pre {
-  background: #eee;
-  font-family: monospace;
+  background: var(--fixedWidthBackgroundColor);
+  font-family: var(--fixedWidthFont);
   font-size: 1.8rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
   padding: 1.6em;
+  cursor: text;
 }
 
 code,
@@ -716,7 +718,6 @@ textarea {
 
 .site-header a a:hover {
   color: var(--headingColor);
-  background: gainsboro;
 }
 
 .site-header a:hover {
@@ -734,7 +735,6 @@ textarea {
 
 .entry-header h2 a:hover {
   color: var(--headingColor);
-  background: gainsboro;
 }
 
 .entry-header a {
