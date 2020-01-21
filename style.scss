@@ -42,7 +42,7 @@ Tags: one-column
 html {
   --headingColor: #444;
   --baseSize: 8px;
-  --radius: var(--baseSize) / 2;
+  --radius: var(--baseSize);
 
   // headings
 
@@ -61,7 +61,7 @@ html {
 // fixed width
   --fixedWidthFont: 'SF Mono', 'Roboto Mono', Menlo, monospace;
   --fixedFontSize: 1.2rem;
-  --fixedWidthColor: #555;
+  --fixedWidthColor: #cfcfcf;
   --fixedWidthBackgroundColor: #444;
 
   // site header

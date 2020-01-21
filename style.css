@@ -41,7 +41,7 @@ Tags: one-column
 html {
   --headingColor: #444;
   --baseSize: 8px;
-  --radius: var(--baseSize) / 2;
+  --radius: var(--baseSize);
   --headingFont: "New York Medium", "Source Serif Pro", serif;
   --bodyColor: #1c1c1c;
   --bodyBackgroundColor: white;
@@ -51,7 +51,7 @@ html {
   --linkColor: rgb(29, 45, 160);
   --fixedWidthFont: 'SF Mono', 'Roboto Mono', Menlo, monospace;
   --fixedFontSize: 1.2rem;
-  --fixedWidthColor: #555;
+  --fixedWidthColor: #cfcfcf;
   --fixedWidthBackgroundColor: #444;
   --siteHeaderBG: rgb(246, 216, 159);
 }
