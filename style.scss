@@ -1,6 +1,6 @@
 /*
 Theme Name: Leaf
-Version: 1.4.2
+Version: 1.4.3
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
@@ -171,6 +171,7 @@ hr {
 pre {
   font-family: var(--fixedWidthFont);
   border-radius: var(--radius);
+  color: var(--invertedBodyColor);
 }
 
 /* Text-level semantics
