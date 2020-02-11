@@ -2,6 +2,8 @@
 - move title to left, nav links to the right of header
 - add footer
 
+x investigate why images don't show up properly
+x investigate why some mobile loading is done with old theme?
 x make header same color scheme as main theme
 x remove menu from header
 x remove underscores for links
