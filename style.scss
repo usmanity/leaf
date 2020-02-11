@@ -94,7 +94,8 @@ html {
     --fixedWidthColor: white;
     --bodyColor: white;
     --bodyBackgroundColor: #222;
-    --invertedBodyColor: #333;
+    --invertedBodyColor: white;
+    --invertedBodyBackgroundColor: rgb(66, 61, 61);
     --siteHeaderBG: var(--bodyBackgroundColor);
     --linkColor: rgb(246, 216, 159);
     --fixedWidthBackgroundColor: #000;
@@ -107,6 +108,7 @@ html {
   }
   html {
     --baseSize: 6px;
+    --fixedWidthSize: calc(var(--baseSize) * 2);
   }
 }
 
@@ -190,7 +192,6 @@ pre {
 
 a {
   color: var(--linkColor);
-  padding: 2px 5px;
   border-radius: 3px;
 }
 
@@ -697,10 +698,6 @@ textarea {
   width: 100%;
 }
 
-/*--------------------------------------------------------------
-# custom leaf styles after _underscores
---------------------------------------------------------------*/
-
 .content-area,
 .header-content {
   max-width: 840px;
@@ -713,7 +710,8 @@ textarea {
   background: var(--siteHeaderBG);
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid rgba(158, 158, 158, 0.22);
+  margin-bottom: calc(var(--baseSize) * 5);
   .header-content {
     line-height: 0.8;
   }
@@ -722,7 +720,7 @@ textarea {
   }
   a {
     @include header;
-    
+    font-size: calc(var(--baseSize) * 2);
     &:hover {
       background-color: transparent;
     }
@@ -753,8 +751,9 @@ textarea {
         margin: 0 4px;
         background-color: var(--invertedBodyBackgroundColor);
         border-radius: 4px;
-        font-size: 1.3rem;
-        height: 22px;
+        font-size: calc(var(--baseSize) * 1.5);
+        height: calc(var(--baseSize) * 3);
+        color: var(--invertedBodyColor);
         &:before {
           content: "";
         }
@@ -794,7 +793,7 @@ textarea {
 
 .comments-link,
 .post-edit-link {
-  font-size: var(--fixedFontSize);
+  font-size: calc(var(--baseSize) * 1.5);
   font-family: var(--fixedWidthFont);
   margin: 5px 0;
   padding-left: 0;
@@ -809,5 +808,13 @@ textarea {
 Helpers
 ----------------*/
 .hidden {
+  display: none;
+}
+
+
+/*---------------
+Removing some unneeded things
+---------------*/
+.sharedaddy {
   display: none;
 }

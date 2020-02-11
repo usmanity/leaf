@@ -1,12 +1,12 @@
 - add 'navigation links' [primary menu needs to be updated]
 - move title to left, nav links to the right of header
 - add footer
-- fix smaller font size at the bottom for "leave a comment"
-- remove "like" buttons
 - remove similar posts
-- reduce padding between links
-- make smaller font size for title of blog
 
+x fix smaller font size at the bottom for "leave a comment"
+x remove "like" buttons
+x reduce padding between links
+x make smaller font size for title of blog
 x investigate why images don't show up properly
 x investigate why some mobile loading is done with old theme?
 x make header same color scheme as main theme
