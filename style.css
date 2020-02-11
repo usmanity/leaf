@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: Leaf
-Version: 1.4
+Version: 1.4.2
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
@@ -63,17 +63,6 @@ html {
     --siteHeaderBG: var(--bodyBackgroundColor);
     --linkColor: rgb(246, 216, 159);
     --fixedWidthBackgroundColor: #000;
-  }
-}
-
-@media (max-device-width: 480px) {
-  .site-main {
-    padding: 0 20px;
-  }
-  html {
-    --baseSize: 6px;
-    --fixedWidthSize: calc(var(--baseSize) * 2);
-    max-width: 480px;
   }
 }
 
@@ -817,5 +806,30 @@ Removing some unneeded things
 ---------------*/
 .sharedaddy {
   display: none;
+}
+
+figure,
+.wp-block-embed-youtube {
+  max-width: 100%;
+  width: 100%;
+}
+
+/*---------------
+responsive styles
+---------------*/
+@media (max-device-width: 480px) {
+  .site-main {
+    padding: 0 20px;
+  }
+  figure,
+  .wp-block-embed-youtube,
+  .wp-block-gallery {
+    width: 300px;
+    max-width: 480px;
+    overflow: hidden;
+  }
+  p {
+    overflow: hidden;
+  }
 }
 /*# sourceMappingURL=style.css.map */
