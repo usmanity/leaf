@@ -54,5 +54,6 @@
 
   <footer class="entry-footer">
     <?php leaf_entry_footer(); ?>
+    <hr class="post-divider">
   </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

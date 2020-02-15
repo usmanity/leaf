@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: Leaf
-Version: 1.4.4
+Version: 1.5
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
@@ -45,11 +45,12 @@ html {
   --invertedBodyBackgroundColor: var(--bodyColor);
   --headingFont: var(--bodyFont);
   --linkColor: rgb(29, 45, 160);
-  --fixedWidthFont: 'SF Mono', 'Roboto Mono', Menlo, monospace;
+  --fixedWidthFont: "SF Mono", "Roboto Mono", Menlo, monospace;
   --fixedFontSize: var(--baseSize);
   --fixedWidthColor: #cfcfcf;
   --fixedWidthBackgroundColor: #444;
   --siteHeaderBG: rgb(246, 240, 239);
+  --lightAccentColor: rgb(200, 200, 200);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -650,18 +651,8 @@ textarea {
   width: 100%;
   height: calc(var(--baseSize) * 6);
   background: var(--siteHeaderBG);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-bottom: 1px solid rgba(158, 158, 158, 0.22);
   margin-bottom: calc(var(--baseSize) * 5);
-}
-
-.site-header .header-content {
-  line-height: 0.8;
 }
 
 .site-header h1 {
@@ -684,6 +675,23 @@ textarea {
 
 .site-header a:hover {
   background-color: transparent;
+}
+
+.header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.header-links a {
+  padding: 4px;
 }
 
 .entry-header h2 {
@@ -743,6 +751,28 @@ textarea {
 
 .entry-footer .cat-links .post-categories li a {
   color: var(--invertedBodyColor);
+}
+
+.entry-footer .post-divider {
+  background-color: white;
+  border: 0;
+  height: 0px;
+  margin-bottom: 02em;
+  border-bottom: 1px solid var(--lightAccentColor);
+  width: 100%;
+  text-align: center;
+}
+
+.entry-footer .post-divider:after {
+  content: "☉";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+  color: var(--lightAccentColor);
+  font-weight: 100;
 }
 
 .entry-footer .tags-links {

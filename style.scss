@@ -1,6 +1,6 @@
 /*
 Theme Name: Leaf
-Version: 1.4.4
+Version: 1.5
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
@@ -40,30 +40,29 @@ html {
   --baseSize: 8px;
   --radius: var(--baseSize);
 
-// body, paragraph, other text
---bodyColor: #1c1c1c;
---bodyBackgroundColor: white;
---bodyFont: "Inter", sans-serif;
---invertedBodyColor: white;
---invertedBodyBackgroundColor: var(--bodyColor);
+  // body, paragraph, other text
+  --bodyColor: #1c1c1c;
+  --bodyBackgroundColor: white;
+  --bodyFont: "Inter", sans-serif;
+  --invertedBodyColor: white;
+  --invertedBodyBackgroundColor: var(--bodyColor);
 
-// headings
---headingFont: var(--bodyFont);
+  // headings
+  --headingFont: var(--bodyFont);
 
-// links, anchors
---linkColor: rgb(29, 45, 160);
+  // links, anchors
+  --linkColor: rgb(29, 45, 160);
 
-// fixed width
-  --fixedWidthFont: 'SF Mono', 'Roboto Mono', Menlo, monospace;
+  // fixed width
+  --fixedWidthFont: "SF Mono", "Roboto Mono", Menlo, monospace;
   --fixedFontSize: var(--baseSize);
   --fixedWidthColor: #cfcfcf;
   --fixedWidthBackgroundColor: #444;
 
   // site header
-   --siteHeaderBG: rgb(246, 240, 239);
+  --siteHeaderBG: rgb(246, 240, 239);
+  --lightAccentColor: rgb(200, 200, 200);
 }
-
-
 
 @mixin flexColumn {
   display: flex;
@@ -79,7 +78,7 @@ html {
   margin-bottom: 0;
   a {
     &:hover {
-    color: var(--headingColor);
+      color: var(--headingColor);
     }
   }
 }
@@ -690,13 +689,8 @@ textarea {
   width: 100%;
   height: calc(var(--baseSize) * 6);
   background: var(--siteHeaderBG);
-  display: flex;
-  justify-content: center;
   border-bottom: 1px solid rgba(158, 158, 158, 0.22);
   margin-bottom: calc(var(--baseSize) * 5);
-  .header-content {
-    line-height: 0.8;
-  }
   h1 {
     margin: 0.67em 0;
   }
@@ -708,12 +702,24 @@ textarea {
     }
   }
 }
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-links {
+  a {
+    padding: 4px;
+  }
+}
 
 .entry-header {
   h2 {
     @include header;
   }
-  
+
   a {
     color: var(--headingColor);
     padding-left: 0;
@@ -748,6 +754,26 @@ textarea {
       }
     }
   }
+  .post-divider {
+    background-color: white;
+    border: 0;
+    height: 0px;
+    margin-bottom: 02em;
+    border-bottom: 1px solid var(--lightAccentColor);
+    width: 100%;
+    text-align: center;
+    &:after {
+      content: "☉";
+      display: inline-block;
+      position: relative;
+      top: -0.7em;
+      font-size: 1.5em;
+      padding: 0 0.25em;
+      background: white;
+      color: var(--lightAccentColor);
+      font-weight: 100;
+    }
+  }
   .tags-links {
     margin: 5px 0;
     a {
@@ -780,7 +806,7 @@ textarea {
   margin: 5px 0;
   padding-left: 0;
   a,
-  span { 
+  span {
     color: var(--fixedWidthColor);
     padding-left: 0;
   }
@@ -792,7 +818,6 @@ Helpers
 .hidden {
   display: none;
 }
-
 
 /*---------------
 Removing some unneeded things
@@ -807,7 +832,6 @@ figure,
   width: 100%;
 }
 
-
 /*---------------
 responsive styles
 ---------------*/
@@ -815,11 +839,11 @@ responsive styles
   .site-main {
     padding: 0 20px;
   }
-  html {
-    // --baseSize: 6px;
-    // --fixedWidthSize: calc(var(--baseSize) * 2);
-    // max-width: 480px;
-  }
+  // html {
+  // --baseSize: 6px;
+  // --fixedWidthSize: calc(var(--baseSize) * 2);
+  // max-width: 480px;
+  // }
   figure,
   .wp-block-embed-youtube,
   .wp-block-gallery {

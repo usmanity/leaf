@@ -34,6 +34,10 @@
             <p class="site-description"><?php echo $leaf_description; /* WPCS: xss ok. */ ?></p>
           <?php endif; ?>
         </div><!-- .site-branding -->
+        <div class="header-links">
+            <a href="/pages">Pages</a>
+            <a href="/archives">Archive</a>
+        </div><!-- .header-links -->
 
         <!-- // hiding for now, jan 2020 -->
         <nav id="site-navigation" class="hidden main-navigation">

@@ -3,7 +3,8 @@
 - add 'navigation links' [primary menu needs to be updated]
 - move title to left, nav links to the right of header
 - add footer
-- remove similar posts
+
+- use sans-serif font for date and comment link
 
 x fix smaller font size at the bottom for "leave a comment"
 x remove "like" buttons
@@ -17,3 +18,7 @@ x remove underscores for links
 x fix typography
 x space each post better
 x setup dark mode
+
+
+will not do
+0 remove related posts -- I like related posts now
