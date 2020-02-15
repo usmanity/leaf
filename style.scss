@@ -1,6 +1,6 @@
 /*
 Theme Name: Leaf
-Version: 1.5
+Version: 1.5.1
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
@@ -519,7 +519,7 @@ big {
 
 time {
   font-size: calc(var(--fixedFontSize) * 1.4);
-  font-family: var(--fixedWidthFont);
+  font-family: var(--bodyFont);
   color: var(--fixedWidthColor);
 }
 
@@ -802,7 +802,7 @@ textarea {
 .comments-link,
 .post-edit-link {
   font-size: calc(var(--baseSize) * 1.5);
-  font-family: var(--fixedWidthFont);
+  font-family: var(--bodyFont);
   margin: 5px 0;
   padding-left: 0;
   a,
