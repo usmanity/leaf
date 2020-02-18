@@ -7,7 +7,7 @@ See [releases](https://github.com/usmanity/leaf/releases) for latest version to 
 
 ## Versioning
 
-This project does not use a strict SemVer since it's not not a tool, mostly
+This project does not use a strict SemVer since it's not a tool or library, it's mostly
 visual and each version includes adjustments, fixes, and removes mainly broken
 things. The version number should be correlated with the visual style more than
 what's in the code. The expectation is that you see which version contains the
