@@ -1,6 +1,6 @@
 /*
 Theme Name: Leaf
-Version: 1.5.1
+Version: 1.7
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
@@ -557,7 +557,7 @@ ul {
       position: absolute;
       content: "☉";
       margin-left: -20px;
-      margin-top: 6px;
+      margin-top: 4px;
       font-size: 1.2rem;
       vertical-align: middle;
       text-align: center;
@@ -686,11 +686,14 @@ textarea {
 }
 
 .site-header {
+  justify-content: center;
+  display: flex;
   width: 100%;
-  height: calc(var(--baseSize) * 6);
+
   background: var(--siteHeaderBG);
   border-bottom: 1px solid rgba(158, 158, 158, 0.22);
   margin-bottom: calc(var(--baseSize) * 5);
+  padding: 10px 20px;
   h1 {
     margin: 0.67em 0;
   }
@@ -758,7 +761,7 @@ textarea {
     background-color: white;
     border: 0;
     height: 0px;
-    margin-bottom: 02em;
+    margin: 2em auto 1.3em;
     border-bottom: 1px solid var(--lightAccentColor);
     width: 100%;
     text-align: center;
@@ -769,7 +772,7 @@ textarea {
       top: -0.7em;
       font-size: 1.5em;
       padding: 0 0.25em;
-      background: white;
+      background: var(--bodyBackgroundColor);
       color: var(--lightAccentColor);
       font-weight: 100;
     }

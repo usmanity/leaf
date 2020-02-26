@@ -21,11 +21,11 @@
           the_custom_logo();
           if (is_front_page() && is_home()) :
           ?>
-            <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+            <div class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></div>
           <?php
           else :
           ?>
-            <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+            <div class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></div>
           <?php
           endif;
           $leaf_description = get_bloginfo('description', 'display');
@@ -35,7 +35,7 @@
           <?php endif; ?>
         </div><!-- .site-branding -->
         <div class="header-links">
-            <a href="/pages">Pages</a>
+            <a href="/all-pages">Pages</a>
             <a href="/archives">Archive</a>
         </div><!-- .header-links -->
 
