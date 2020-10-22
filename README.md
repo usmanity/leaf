@@ -1,5 +1,8 @@
-# leaf
-a theme for wordpress blogs
+# Leaf
+A theme for wordpress blogs 
+This theme is intended for blogs that are text heavy with images used sparingly. 
+Don't use this theme if you have a photography blog or an image heavy blog. 
+
 
 ## Downloads
 
