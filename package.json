@@ -1,6 +1,6 @@
 {
   "name": "leaf",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A theme for wordpress blogs.  This theme is intended for blogs that are text heavy with images used sparingly.  Don't use this theme if you have a photography blog or an image heavy blog.",
   "main": "index.js",
   "scripts": {
