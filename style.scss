@@ -520,7 +520,7 @@ big {
 time {
   font-size: calc(var(--fixedFontSize) * 1.4);
   font-family: var(--bodyFont);
-  color: var(--fixedWidthColor);
+  color: var(--bodyColor);
 }
 
 /*--------------------------------------------------------------
@@ -681,7 +681,7 @@ textarea {
 
 .content-area,
 .header-content {
-  max-width: 840px;
+  max-width: 680px;
   margin: auto;
 }
 
@@ -691,7 +691,6 @@ textarea {
   width: 100%;
 
   background: var(--siteHeaderBG);
-  border-bottom: 1px solid rgba(158, 158, 158, 0.22);
   margin-bottom: calc(var(--baseSize) * 5);
   padding: 10px 20px;
   h1 {
@@ -703,6 +702,10 @@ textarea {
     &:hover {
       background-color: transparent;
     }
+  }
+  .site-description {
+    font-size: 0.7em;
+	letter-spacing: 0.03em;
   }
 }
 .header-content {
@@ -719,6 +722,7 @@ textarea {
 }
 
 .entry-header {
+  margin-bottom: 50px;
   h2 {
     @include header;
   }
@@ -731,6 +735,7 @@ textarea {
 
 .entry-footer {
   @include flexColumn;
+  margin-top: 50px;
   .cat-links {
     .post-categories {
       display: flex;
@@ -810,7 +815,7 @@ textarea {
   padding-left: 0;
   a,
   span {
-    color: var(--fixedWidthColor);
+    color: var(--bodyColor);
     padding-left: 0;
   }
 }

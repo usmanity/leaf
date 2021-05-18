@@ -1,0 +1,22 @@
+{
+  "name": "leaf",
+  "version": "1.0.0",
+  "description": "A theme for wordpress blogs.  This theme is intended for blogs that are text heavy with images used sparingly.  Don't use this theme if you have a photography blog or an image heavy blog.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usmanity/leaf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usmanity/leaf/issues"
+  },
+  "homepage": "https://github.com/usmanity/leaf#readme",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
