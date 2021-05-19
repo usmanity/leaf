@@ -1,6 +1,6 @@
 /*
 Theme Name: Leaf
-Version: 1.2.0
+Version: 1.3.0
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
@@ -109,20 +109,19 @@ html {
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://rsms.me/inter/inter.css");
-html {
-  font-family: "Inter", sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", sans-serif;
-  }
-}
+// html {
+//   font-family: "Inter", sans-serif;
+// }
+// @supports (font-variation-settings: normal) {
+//   html {
+//     font-family: "Inter var", sans-serif;
+//   }
+// }
 
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  font-size: 10px;
-}
+// html {
+//   line-height: 1.15; /* 1 */
+//   -webkit-text-size-adjust: 100%; /* 2 */
+// }
 
 /* Sections
    ========================================================================== */
@@ -679,35 +678,34 @@ textarea {
   width: 100%;
 }
 
-.content-area,
 .header-content {
   max-width: 680px;
   margin: auto;
 }
 
-.site-header {
-  justify-content: center;
-  display: flex;
-  width: 100%;
+// .site-header {
+//   justify-content: center;
+//   display: flex;
+//   width: 100%;
 
-  background: var(--siteHeaderBG);
-  margin-bottom: calc(var(--baseSize) * 5);
-  padding: 10px 20px;
-  h1 {
-    margin: 0.67em 0;
-  }
-  a {
-    @include header;
-    font-size: calc(var(--baseSize) * 2);
-    &:hover {
-      background-color: transparent;
-    }
-  }
-  .site-description {
-    font-size: 0.7em;
-	letter-spacing: 0.03em;
-  }
-}
+//   background: var(--siteHeaderBG);
+//   margin-bottom: calc(var(--baseSize) * 5);
+//   padding: 10px 20px;
+//   h1 {
+//     margin: 0.67em 0;
+//   }
+//   a {
+//     @include header;
+//     font-size: calc(var(--baseSize) * 2);
+//     &:hover {
+//       background-color: transparent;
+//     }
+//   }
+//   .site-description {
+//     font-size: 0.7em;
+// 	letter-spacing: 0.03em;
+//   }
+// }
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -820,19 +818,6 @@ textarea {
   }
 }
 
-/*----------------
-Helpers
-----------------*/
-.hidden {
-  display: none;
-}
-
-/*---------------
-Removing some unneeded things
----------------*/
-.sharedaddy {
-  display: none;
-}
 
 figure,
 .wp-block-embed-youtube {
@@ -862,4 +847,18 @@ responsive styles
   p {
     overflow: hidden;
   }
+}
+
+/*----------------
+Helpers
+----------------*/
+.hidden {
+  display: none;
+}
+
+/*---------------
+Removing some unneeded things
+---------------*/
+.sharedaddy {
+  display: none;
 }
