@@ -53,4 +53,4 @@
       </div><!-- .header-content -->
     </header><!-- #masthead -->
 
-    <div id="content" class="site-content">
+    <div id="content" class="site-content container max-w-screen-sm mx-auto">
