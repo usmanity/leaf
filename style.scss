@@ -4,105 +4,85 @@ Version: 1.3.0
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
-Description: An attempt at a legible theme
+Description: An attempt at a legible theme – this style.css only adds additional styles that aren't in tailwind
 License: CC0 1.0 Universal
 License URI: https://creativecommons.org/publicdomain/zero/1.0/deed.en
 Text Domain: leaf
 Tags: one-column
-*/
+ */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Variables
-# Typography
-# Elements
-# Forms
-# Navigation
-  ## Links
-  ## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-  ## Posts and pages
-# Infinite scroll
-# Media
-  ## Captions
-  ## Galleries
-# Layout
---------------------------------------------------------------*/
+
 
 // ------ VARIABLES
 html {
-  --headingColor: #444;
-  --baseSize: 8px;
-  --radius: var(--baseSize);
+    --headingColor: #444;
+    --baseSize: 8px;
+    --radius: var(--baseSize);
 
-  // body, paragraph, other text
-  --bodyColor: #1c1c1c;
-  --bodyBackgroundColor: white;
-  --bodyFont: "Inter", sans-serif;
-  --invertedBodyColor: white;
-  --invertedBodyBackgroundColor: var(--bodyColor);
 
-  // headings
-  --headingFont: var(--bodyFont);
+    // body, paragraph, other text
+    --bodyColor: #1c1c1c;
+    --bodyBackgroundColor: white;
+    --bodyFont: "Inter", sans-serif;
+    --invertedBodyColor: white;
+    --invertedBodyBackgroundColor: var(--bodyColor);
 
-  // links, anchors
-  --linkColor: rgb(29, 45, 160);
+    // headings
+    --headingFont: var(--bodyFont);
 
-  // fixed width
-  --fixedWidthFont: "SF Mono", "Roboto Mono", Menlo, monospace;
-  --fixedFontSize: var(--baseSize);
-  --fixedWidthColor: #cfcfcf;
-  --fixedWidthBackgroundColor: #444;
+    // links, anchors
+    --linkColor: rgb(29, 45, 160);
 
-  // site header
-  --siteHeaderBG: rgb(246, 240, 239);
-  --lightAccentColor: rgb(200, 200, 200);
+    // fixed width
+    --fixedWidthFont: "SF Mono", "Roboto Mono", Menlo, monospace;
+    --fixedFontSize: var(--baseSize);
+    --fixedWidthColor: #cfcfcf;
+    --fixedWidthBackgroundColor: #444;
+
+    // site header
+    --siteHeaderBG: rgb(246, 240, 239);
+    --lightAccentColor: rgb(200, 200, 200);
 }
 
 @mixin flexColumn {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 @mixin header {
-  color: var(--headingColor);
-  font-family: var(--headingFont);
-  letter-spacing: 0.013em;
-  font-weight: 600;
-  font-size: calc(var(--baseSize) * 3);
-  margin-bottom: 0;
-  a {
-    &:hover {
-      color: var(--headingColor);
+    color: var(--headingColor);
+    font-family: var(--headingFont);
+    letter-spacing: 0.013em;
+    font-weight: 600;
+    font-size: calc(var(--baseSize) * 3);
+    margin-bottom: 0;
+    a {
+        &:hover {
+            color: var(--headingColor);
+        }
     }
-  }
 }
 
 @mixin fixedWidthStyles {
-  // font-size: calc(var(--fixedWidthSize) * 0.9);
+    // font-size: calc(var(--fixedWidthSize) * 0.9);
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    --headingColor: white;
-    --fixedWidthColor: white;
-    --bodyColor: white;
-    --bodyBackgroundColor: #222;
-    --invertedBodyColor: white;
-    --invertedBodyBackgroundColor: rgb(66, 61, 61);
-    --siteHeaderBG: var(--bodyBackgroundColor);
-    --linkColor: rgb(246, 216, 159);
-    --fixedWidthBackgroundColor: #000;
-  }
+    html {
+        --headingColor: white;
+        --fixedWidthColor: white;
+        --bodyColor: white;
+        --bodyBackgroundColor: #222;
+        --invertedBodyColor: white;
+        --invertedBodyBackgroundColor: rgb(66, 61, 61);
+        --siteHeaderBG: var(--bodyBackgroundColor);
+        --linkColor: rgb(246, 216, 159);
+        --fixedWidthBackgroundColor: #000;
+    }
 }
 
 /* Document
-   ========================================================================== */
+========================================================================== */
 
 /**
  * 1. Correct the line height in all browsers.
@@ -124,14 +104,14 @@ html {
 // }
 
 /* Sections
-   ========================================================================== */
+========================================================================== */
 
 /**
  * Remove the margin in all browsers.
  */
 
 body {
-  // background-color: #f9f9f9;
+    // background-color: #f9f9f9;
 }
 
 /**
@@ -140,11 +120,10 @@ body {
  */
 
 h1 {
-  @include header;
 }
 
 /* Grouping content
-   ========================================================================== */
+========================================================================== */
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -152,20 +131,20 @@ h1 {
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
 }
 
 /* Text-level semantics
-   ========================================================================== */
+========================================================================== */
 
 /**
  * Remove the gray background on active links in IE 10.
  */
 
 a {
-  border-radius: 3px;
+    border-radius: 3px;
 }
 
 /**
@@ -174,9 +153,9 @@ a {
  */
 
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -185,7 +164,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bolder;
+    font-weight: bolder;
 }
 
 /**
@@ -193,7 +172,7 @@ strong {
  */
 
 small {
-  font-size: 80%;
+    font-size: 80%;
 }
 
 /**
@@ -203,33 +182,33 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+    top: -0.5em;
 }
 
 /* Embedded content
-   ========================================================================== */
+========================================================================== */
 
 /**
  * Remove the border on images inside links in IE 10.
  */
 
 img {
-  border-style: none;
+    border-style: none;
 }
 
 /* Forms
-   ========================================================================== */
+========================================================================== */
 
 /**
  * 1. Change the font styles in all browsers.
@@ -241,10 +220,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
 }
 
 /**
@@ -254,8 +233,8 @@ textarea {
 
 button,
 input {
-  /* 1 */
-  overflow: visible;
+    /* 1 */
+    overflow: visible;
 }
 
 /**
@@ -265,8 +244,8 @@ input {
 
 button,
 select {
-  /* 1 */
-  text-transform: none;
+    /* 1 */
+    text-transform: none;
 }
 
 /**
@@ -277,7 +256,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+    -webkit-appearance: button;
 }
 
 /**
@@ -288,8 +267,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+    border-style: none;
+    padding: 0;
 }
 
 /**
@@ -300,7 +279,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+    outline: 1px dotted ButtonText;
 }
 
 /**
@@ -308,7 +287,7 @@ button:-moz-focusring,
  */
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+    padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -319,12 +298,12 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
 }
 
 /**
@@ -332,7 +311,7 @@ legend {
  */
 
 progress {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 /**
@@ -340,7 +319,7 @@ progress {
  */
 
 textarea {
-  overflow: auto;
+    overflow: auto;
 }
 
 /**
@@ -350,8 +329,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
 }
 
 /**
@@ -360,7 +339,7 @@ textarea {
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto;
+    height: auto;
 }
 
 /**
@@ -369,8 +348,8 @@ textarea {
  */
 
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -378,7 +357,7 @@ textarea {
  */
 
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 /**
@@ -387,19 +366,19 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
 }
 
 /* Interactive
-   ========================================================================== */
+========================================================================== */
 
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 
 details {
-  display: block;
+    display: block;
 }
 
 /*
@@ -407,18 +386,18 @@ details {
  */
 
 summary {
-  display: list-item;
+    display: list-item;
 }
 
 /* Misc
-   ========================================================================== */
+========================================================================== */
 
 /**
  * Add the correct display in IE 10+.
  */
 
 template {
-  display: none;
+    display: none;
 }
 
 /**
@@ -426,7 +405,7 @@ template {
  */
 
 [hidden] {
-  display: none;
+    display: none;
 }
 
 /*--------------------------------------------------------------
@@ -438,8 +417,8 @@ input,
 select,
 optgroup,
 textarea {
-  font-family: var(--bodyFont);
-  line-height: 1.5;
+    font-family: var(--bodyFont);
+    line-height: 1.5;
 }
 
 h1,
@@ -448,169 +427,169 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both;
-  font-family: var(--headingFont);
+    clear: both;
+    font-family: var(--headingFont);
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 // paragraph text, main body text
 p {
-  margin-bottom: 0.5em;
-  line-height: 2.6rem;
+    margin-bottom: 0.5em;
+    line-height: 2.6rem;
 }
 
 dfn,
 cite,
 em,
 i {
-  font-style: italic;
+    font-style: italic;
 }
 
 blockquote {
-  margin: 0 1.5em;
+    margin: 0 1.5em;
 }
 
 address {
-  margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 
 code,
 kbd,
 tt,
 var {
-  @include fixedWidthStyles;
+    @include fixedWidthStyles;
 }
 
 pre {
-  background: var(--fixedWidthBackgroundColor);
-  font-family: var(--fixedWidthFont);
-  border-radius: var(--radius);
-  color: var(--invertedBodyColor);
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.6em;
-  cursor: text;
+    background: var(--fixedWidthBackgroundColor);
+    font-family: var(--fixedWidthFont);
+    border-radius: var(--radius);
+    color: var(--invertedBodyColor);
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+    cursor: text;
 }
 
 abbr,
 acronym {
-  border-bottom: 1px dotted #666;
-  cursor: help;
+    border-bottom: 1px dotted #666;
+    cursor: help;
 }
 
 mark,
 ins {
-  background: #fff9c0;
-  text-decoration: none;
+    background: #fff9c0;
+    text-decoration: none;
 }
 
 big {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 time {
-  font-size: calc(var(--fixedFontSize) * 1.4);
-  font-family: var(--bodyFont);
-  color: var(--bodyColor);
+    font-size: calc(var(--fixedFontSize) * 1.4);
+    font-family: var(--bodyFont);
+    color: var(--bodyColor);
 }
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
-*:before,
-*:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit;
-}
-
-hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em;
-}
-
-ul,
-ol {
-  margin: 0 0 3rem 1rem;
-}
-
-ul {
-  list-style: none;
-  li {
-    margin: 10px 0px;
-    &:before {
-      position: absolute;
-      content: "☉";
-      margin-left: -20px;
-      margin-top: 4px;
-      font-size: 1.2rem;
-      vertical-align: middle;
-      text-align: center;
+    *:before,
+    *:after {
+        /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+        box-sizing: inherit;
     }
-  }
-}
 
-ol {
-  list-style: decimal;
-}
+    hr {
+        background-color: #ccc;
+        border: 0;
+        height: 1px;
+        margin-bottom: 1.5em;
+    }
 
-dt {
-  font-weight: bold;
-}
+    ul,
+    ol {
+        margin: 0 0 3rem 1rem;
+    }
 
-dd {
-  margin: 0 1.5em 1.5em;
-}
+    ul {
+        list-style: none;
+        li {
+            margin: 10px 0px;
+            &:before {
+                position: absolute;
+                content: "☉";
+                margin-left: -20px;
+                margin-top: 4px;
+                font-size: 1.2rem;
+                vertical-align: middle;
+                text-align: center;
+            }
+        }
+    }
 
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */
-}
+    ol {
+        list-style: decimal;
+    }
 
-figure {
-  margin: 1em 0;
-  /* Extra wide images within figure tags don't overflow the content area. */
-}
+    dt {
+        font-weight: bold;
+    }
 
-table {
-  margin: 0 0 1.5em;
-  width: 100%;
-}
+    dd {
+        margin: 0 1.5em 1.5em;
+    }
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
+    img {
+        height: auto;
+        /* Make sure images are scaled correctly. */
+        max-width: 100%;
+        /* Adhere to container width. */
+    }
+
+    figure {
+        margin: 1em 0;
+        /* Extra wide images within figure tags don't overflow the content area. */
+    }
+
+    table {
+        margin: 0 0 1.5em;
+        width: 100%;
+    }
+
+    /*--------------------------------------------------------------
+    # Forms
+    --------------------------------------------------------------*/
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: 0.6em 1em 0.4em;
+    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    border-radius: 3px;
+    background: #e6e6e6;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 0.6em 1em 0.4em;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
+    border-color: #ccc #bbb #aaa;
 }
 
 button:active,
@@ -621,7 +600,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
+    border-color: #aaa #bbb #bbb;
 }
 
 input[type="text"],
@@ -640,10 +619,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px;
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px;
 }
 
 input[type="text"]:focus,
@@ -662,161 +641,103 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #111;
+    color: #111;
 }
 
 select {
-  border: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 
 textarea {
-  width: 100%;
+    width: 100%;
 }
 
 .header-content {
-  max-width: 680px;
-  margin: auto;
+    max-width: 680px;
+    margin: auto;
 }
 
-// .site-header {
-//   justify-content: center;
-//   display: flex;
-//   width: 100%;
+.header-content { }
 
-//   background: var(--siteHeaderBG);
-//   margin-bottom: calc(var(--baseSize) * 5);
-//   padding: 10px 20px;
-//   h1 {
-//     margin: 0.67em 0;
-//   }
-//   a {
-//     @include header;
-//     font-size: calc(var(--baseSize) * 2);
-//     &:hover {
-//       background-color: transparent;
-//     }
-//   }
-//   .site-description {
-//     font-size: 0.7em;
-// 	letter-spacing: 0.03em;
-//   }
-// }
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
+.header-links { }
 
-.header-links {
-  a {
-    padding: 4px;
-  }
-}
-
-.entry-header {
-}
+.entry-header { }
 
 .entry-footer {
-  .post-divider {
-    background-color: white;
-    border: 0;
-    height: 0px;
-    margin: 2em auto 1.3em;
-    border-bottom: 1px solid var(--lightAccentColor);
-    width: 100%;
-    text-align: center;
-    &:after {
-      content: "☉";
-      display: inline-block;
-      position: relative;
-      top: -0.7em;
-      font-size: 1.5em;
-      padding: 0 0.25em;
-      background: var(--bodyBackgroundColor);
-      color: var(--lightAccentColor);
-      font-weight: 100;
+    .post-divider {
+        background-color: white;
+        border: 0;
+        height: 0px;
+        margin: 2em auto 1.3em;
+        border-bottom: 1px solid var(--lightAccentColor);
+        width: 100%;
+        text-align: center;
+        &:after {
+            content: "☉";
+            display: inline-block;
+            position: relative;
+            top: -0.7em;
+            font-size: 1.5em;
+            padding: 0 0.25em;
+            background: var(--bodyBackgroundColor);
+            color: var(--lightAccentColor);
+            font-weight: 100;
+        }
     }
-  }
-  .tags-links {
-    margin: 5px 0;
-    a {
-      &:first-of-type {
-        margin-left: 0;
-      }
-      color: var(--invertedBodyColor);
-      padding: 2px 6px;
-      margin: 0 4px;
-      background-color: var(--bodyBackgroundColor);
-      border-radius: 4px;
-      font-size: 1.3rem;
-      height: 22px;
+    .tags-links {
+        margin: 5px 0;
+        a {
+            &:first-of-type {
+                margin-left: 0;
+            }
+            color: var(--invertedBodyColor);
+            padding: 2px 6px;
+            margin: 0 4px;
+            background-color: var(--bodyBackgroundColor);
+            border-radius: 4px;
+            font-size: 1.3rem;
+            height: 22px;
+        }
     }
-  }
 }
 
-.post {
-  margin: 20px 0;
-}
+.post { }
 
-.wp-block-embed {
-  text-align: center;
-}
+figure,
+.wp-block-embed-youtube { }
+
+.wp-block-embed { }
 
 .comments-link,
 .post-edit-link {
-  font-size: calc(var(--baseSize) * 1.5);
-  font-family: var(--bodyFont);
-  margin: 5px 0;
-  padding-left: 0;
-  a,
-  span {
-    color: var(--bodyColor);
+    font-size: calc(var(--baseSize) * 1.5);
+    font-family: var(--bodyFont);
+    margin: 5px 0;
     padding-left: 0;
-  }
+    a,
+    span {
+        color: var(--bodyColor);
+        padding-left: 0;
+    }
 }
 
-
-figure,
-.wp-block-embed-youtube {
-  max-width: 100%;
-  width: 100%;
-}
 
 /*---------------
 responsive styles
 ---------------*/
 @media (max-device-width: 480px) {
-  .site-main {
-    padding: 0 20px;
-  }
-  // html {
-  // --baseSize: 6px;
-  // --fixedWidthSize: calc(var(--baseSize) * 2);
-  // max-width: 480px;
-  // }
-  figure,
-  .wp-block-embed-youtube,
-  .wp-block-gallery {
-    width: 300px;
-    max-width: 480px;
-    overflow: hidden;
-  }
-  p {
-    overflow: hidden;
-  }
 }
 
 /*----------------
 Helpers
 ----------------*/
 .hidden {
-  display: none;
+    display: none;
 }
 
 /*---------------
 Removing some unneeded things
 ---------------*/
 .sharedaddy {
-  display: none;
+    display: none;
 }

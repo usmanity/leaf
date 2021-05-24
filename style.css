@@ -5,34 +5,12 @@ Version: 1.3.0
 Theme URI: https://github.com/usmanity/leaf
 Author: Muhammad Usman
 Author URI: https://usmanity.com/
-Description: An attempt at a legible theme
+Description: An attempt at a legible theme – this style.css only adds additional styles that aren't in tailwind
 License: CC0 1.0 Universal
 License URI: https://creativecommons.org/publicdomain/zero/1.0/deed.en
 Text Domain: leaf
 Tags: one-column
-*/
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Variables
-# Typography
-# Elements
-# Forms
-# Navigation
-  ## Links
-  ## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-  ## Posts and pages
-# Infinite scroll
-# Media
-  ## Captions
-  ## Galleries
-# Layout
---------------------------------------------------------------*/
+ */
 @import url("https://rsms.me/inter/inter.css");
 html {
   --headingColor: #444;
@@ -65,13 +43,13 @@ html {
     --fixedWidthBackgroundColor: #000; } }
 
 /* Document
-   ========================================================================== */
+========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 /* Sections
-   ========================================================================== */
+========================================================================== */
 /**
  * Remove the margin in all browsers.
  */
@@ -79,18 +57,8 @@ html {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-  color: var(--headingColor);
-  font-family: var(--headingFont);
-  letter-spacing: 0.013em;
-  font-weight: 600;
-  font-size: calc(var(--baseSize) * 3);
-  margin-bottom: 0; }
-  h1 a:hover {
-    color: var(--headingColor); }
-
 /* Grouping content
-   ========================================================================== */
+========================================================================== */
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -104,7 +72,7 @@ hr {
   /* 2 */ }
 
 /* Text-level semantics
-   ========================================================================== */
+========================================================================== */
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -154,7 +122,7 @@ sup {
   top: -0.5em; }
 
 /* Embedded content
-   ========================================================================== */
+========================================================================== */
 /**
  * Remove the border on images inside links in IE 10.
  */
@@ -162,7 +130,7 @@ img {
   border-style: none; }
 
 /* Forms
-   ========================================================================== */
+========================================================================== */
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -310,7 +278,7 @@ textarea {
   /* 2 */ }
 
 /* Interactive
-   ========================================================================== */
+========================================================================== */
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -324,7 +292,7 @@ summary {
   display: list-item; }
 
 /* Misc
-   ========================================================================== */
+========================================================================== */
 /**
  * Add the correct display in IE 10+.
  */
@@ -464,8 +432,8 @@ table {
   width: 100%; }
 
 /*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
+    # Forms
+    --------------------------------------------------------------*/
 button,
 input[type="button"],
 input[type="reset"],
@@ -545,15 +513,6 @@ textarea {
   max-width: 680px;
   margin: auto; }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; }
-
-.header-links a {
-  padding: 4px; }
-
 .entry-footer .post-divider {
   background-color: white;
   border: 0;
@@ -586,12 +545,6 @@ textarea {
     .entry-footer .tags-links a:first-of-type {
       margin-left: 0; }
 
-.post {
-  margin: 20px 0; }
-
-.wp-block-embed {
-  text-align: center; }
-
 .comments-link,
 .post-edit-link {
   font-size: calc(var(--baseSize) * 1.5);
@@ -605,26 +558,9 @@ textarea {
     color: var(--bodyColor);
     padding-left: 0; }
 
-figure,
-.wp-block-embed-youtube {
-  max-width: 100%;
-  width: 100%; }
-
 /*---------------
 responsive styles
 ---------------*/
-@media (max-device-width: 480px) {
-  .site-main {
-    padding: 0 20px; }
-  figure,
-  .wp-block-embed-youtube,
-  .wp-block-gallery {
-    width: 300px;
-    max-width: 480px;
-    overflow: hidden; }
-  p {
-    overflow: hidden; } }
-
 /*----------------
 Helpers
 ----------------*/
